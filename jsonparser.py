@@ -4,7 +4,7 @@ import csv, json
 import pandas as pan
 
 input_csv_file = pan.read_csv("jsonFile.csv")
-list_of_dict = input_csv_file['{"UserName":"himasagar.atluri@gmail.com"}'].tolist()
+list_of_dict = input_csv_file['{"UserName":"@gmail.com"}'].tolist()
 mydict={key:value for elem in list_of_dict for key,value in eval(elem).items()}
 
 with open('outputfile.csv', 'wb') as csv_file:
